@@ -1,6 +1,8 @@
+import css from "./TransactionHistory.module.css"
+
 export default function TransactionHistory({ items }) {
     return (<>
-        <table>
+        <table className={css.table}>
   <thead>
     <tr>
       <th>Type</th>
@@ -11,14 +13,8 @@ export default function TransactionHistory({ items }) {
 
   <tbody>
     {items.map(({ id, type, amount, currency }) => {
-            // const classTable = clsx(css.colorTable, {
-            //   [css.invoice]: type === "invoice",
-            //   [css.payment]: type === "payment",
-            //   [css.withdrawal]: type === "withdrawal",
-            //   [css.deposit]: type === "deposit",
-            // });
             return (
-              <tr key={id}>
+              <tr className={css.tableLine} key={id}>
                 <td>{type}</td>
                 <td>{amount}</td>
                 <td>{currency}</td>

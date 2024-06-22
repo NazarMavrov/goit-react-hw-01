@@ -1,0 +1,13 @@
+.table {
+    width: 600px;
+    background-color: rgba(38, 2, 43, 0.116);
+    margin: 0 auto;
+}
+
+.tableLine:nth-child(odd) {
+    background-color: yellowgreen;
+}
+
+.tableLine:nth-child(even) {
+    background-color: green;
+}
