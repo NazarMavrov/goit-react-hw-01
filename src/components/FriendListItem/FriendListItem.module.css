@@ -1,3 +1,11 @@
 .friendsListText {
     margin-left: 16px;
 }
+
+.Online {
+    color: green;
+}
+
+.Offline {
+    color: red;
+}

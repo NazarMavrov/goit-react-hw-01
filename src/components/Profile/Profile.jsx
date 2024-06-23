@@ -1,31 +1,28 @@
 import css from './Profile.module.css'
 
-export default function Profile() {
+export default function Profile({ name, tag, location, image, stats }) {
     return(  <div className={css.profileWrapp}>
 <div>
 <img
-    src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-    alt="User avatar"
-    width={160}
-    height={160}
+    src={image}
 />
-<p className={css.headText}>Petra Marica</p>
-<p className={css.headText}>@pmarica</p>
-<p className={css.headText}>Salvador, Brasil</p>
+<p className={css.headText}>{name}</p>
+<p className={css.headText}>{tag}</p>
+<p className={css.headText}>{location}</p>
 </div>
 
 <ul>
 <li>
 <span>Followers</span>
-<span>1000</span>
+<span>{stats.followers}</span>
 </li>
 <li>
 <span>Views</span>
-<span>2000</span>
+<span>{stats.views}</span>
 </li>
 <li>
 <span>Likes</span>
-<span>3000</span>
+<span>{stats.likes}</span>
 </li>
 </ul>
 </div>)
